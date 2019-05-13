@@ -14,4 +14,7 @@ end
 def self.ratings_sum 
   Show.sum(:rating)
 end 
+def self.popular_show 
+  Show.where("rating > ?", 5)
+end 
 end 
